@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Project\\Host_project\\xbox_server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|D:\\Project\\Host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|D:\\Project\\Host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|d:\\project\\host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|D:\\Project\\Host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|d:\\project\\host_project\\xbox_server\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +22,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Project\\Host_project\\xbox_server\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\Project\\Host_project\\xbox_server\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Project\\Host_project\\xbox_server\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "D:\\Project\\Host_project\\xbox_server\\Form1.Designer.cs*",
+              "RelativeToolTip": "Form1.Designer.cs*",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAUwIIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T08:54:16.817Z",
+              "WhenOpened": "2025-02-19T09:20:51.819Z",
               "EditorCaption": ""
             },
             {
@@ -40,11 +44,24 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Project\\Host_project\\xbox_server\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\Project\\Host_project\\xbox_server\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAWwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T08:54:16.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "D:\\Project\\Host_project\\xbox_server\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\Project\\Host_project\\xbox_server\\Form1.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "Form1.cs [\u8BBE\u8BA1]",
+              "ToolTip": "D:\\Project\\Host_project\\xbox_server\\Form1.cs [\u8BBE\u8BA1]*",
+              "RelativeToolTip": "Form1.cs [\u8BBE\u8BA1]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T08:49:07.47Z",
               "EditorCaption": " [\u8BBE\u8BA1]"
