@@ -37,17 +37,23 @@
             this.serial_refresh_btn = new System.Windows.Forms.Button();
             this.serial_open_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new ReaLTaiizor.Controls.Button();
-            this.dungeonTabPage1 = new ReaLTaiizor.Controls.DungeonTabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new ReaLTaiizor.Controls.Button();
-            this.circleProgressBar1 = new ReaLTaiizor.Controls.CircleProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.metroSwitch1 = new ReaLTaiizor.Controls.MetroSwitch();
+            this.foreverTabPage1 = new ReaLTaiizor.Controls.ForeverTabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.leftThumb_y_text = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.leftThumb_x_text = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.foxLabel1 = new ReaLTaiizor.Controls.FoxLabel();
+            this.XBOXinfo = new ReaLTaiizor.Controls.FoxButton();
+            this.rightThumb_y_text = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.rightThumb_x_text = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.dungeonTabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.foreverTabPage1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // serial_infos
@@ -129,119 +135,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::xbox_server.Properties.Resources.xbox;
-            this.pictureBox1.Location = new System.Drawing.Point(206, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(75, 124);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(220, 164);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button2.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button2.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Image = null;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.button2.Location = new System.Drawing.Point(10, 202);
-            this.button2.Name = "button2";
-            this.button2.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button2.Size = new System.Drawing.Size(67, 40);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "button2";
-            this.button2.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dungeonTabPage1
-            // 
-            this.dungeonTabPage1.ActivePageBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.dungeonTabPage1.ActivePageBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(195)))));
-            this.dungeonTabPage1.ActivePageTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.dungeonTabPage1.BaseColor = System.Drawing.Color.Transparent;
-            this.dungeonTabPage1.Controls.Add(this.tabPage1);
-            this.dungeonTabPage1.Controls.Add(this.tabPage2);
-            this.dungeonTabPage1.DeactivePageTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.dungeonTabPage1.ItemSize = new System.Drawing.Size(80, 24);
-            this.dungeonTabPage1.Location = new System.Drawing.Point(171, 6);
-            this.dungeonTabPage1.Name = "dungeonTabPage1";
-            this.dungeonTabPage1.PageBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.dungeonTabPage1.PageEdgeBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(195)))));
-            this.dungeonTabPage1.PageEdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.dungeonTabPage1.SelectedIndex = 0;
-            this.dungeonTabPage1.Size = new System.Drawing.Size(394, 316);
-            this.dungeonTabPage1.TabIndex = 12;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(386, 284);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage2.Controls.Add(this.progressBar2);
-            this.tabPage2.Controls.Add(this.circleProgressBar1);
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(386, 284);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button1.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Image = null;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.button1.Location = new System.Drawing.Point(83, 202);
-            this.button1.Name = "button1";
-            this.button1.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button1.Size = new System.Drawing.Size(67, 40);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // circleProgressBar1
-            // 
-            this.circleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.circleProgressBar1.Location = new System.Drawing.Point(16, 41);
-            this.circleProgressBar1.Maximum = ((long)(100));
-            this.circleProgressBar1.MinimumSize = new System.Drawing.Size(100, 100);
-            this.circleProgressBar1.Name = "circleProgressBar1";
-            this.circleProgressBar1.PercentColor = System.Drawing.Color.White;
-            this.circleProgressBar1.ProgressColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.circleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.circleProgressBar1.ProgressShape = ReaLTaiizor.Controls.CircleProgressBar._ProgressShape.Round;
-            this.circleProgressBar1.Size = new System.Drawing.Size(130, 130);
-            this.circleProgressBar1.TabIndex = 9;
-            this.circleProgressBar1.Text = "circleProgressBar1";
-            this.circleProgressBar1.Value = ((long)(0));
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(64, 193);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(100, 23);
-            this.progressBar2.TabIndex = 11;
             // 
             // metroSwitch1
             // 
@@ -255,7 +155,7 @@
             this.metroSwitch1.DisabledCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSwitch1.DisabledUnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
             this.metroSwitch1.IsDerivedStyle = true;
-            this.metroSwitch1.Location = new System.Drawing.Point(15, 290);
+            this.metroSwitch1.Location = new System.Drawing.Point(15, 285);
             this.metroSwitch1.Name = "metroSwitch1";
             this.metroSwitch1.Size = new System.Drawing.Size(58, 22);
             this.metroSwitch1.Style = ReaLTaiizor.Enum.Metro.Style.Light;
@@ -267,16 +167,167 @@
             this.metroSwitch1.ThemeAuthor = "Taiizor";
             this.metroSwitch1.ThemeName = "MetroLight";
             this.metroSwitch1.UnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSwitch1.SwitchedChanged += new ReaLTaiizor.Controls.MetroSwitch.SwitchedChangedEventHandler(this.metroSwitch1_SwitchedChanged);
+            // 
+            // foreverTabPage1
+            // 
+            this.foreverTabPage1.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.foreverTabPage1.ActiveFontColor = System.Drawing.Color.White;
+            this.foreverTabPage1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.foreverTabPage1.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverTabPage1.Controls.Add(this.tabPage1);
+            this.foreverTabPage1.Controls.Add(this.tabPage2);
+            this.foreverTabPage1.DeactiveFontColor = System.Drawing.Color.White;
+            this.foreverTabPage1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.foreverTabPage1.ItemSize = new System.Drawing.Size(100, 20);
+            this.foreverTabPage1.Location = new System.Drawing.Point(168, 6);
+            this.foreverTabPage1.Name = "foreverTabPage1";
+            this.foreverTabPage1.SelectedIndex = 0;
+            this.foreverTabPage1.Size = new System.Drawing.Size(397, 306);
+            this.foreverTabPage1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.foreverTabPage1.TabIndex = 15;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.rightThumb_y_text);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.rightThumb_x_text);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.leftThumb_y_text);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.leftThumb_x_text);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(389, 278);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "手柄信息";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // leftThumb_y_text
+            // 
+            this.leftThumb_y_text.Location = new System.Drawing.Point(38, 157);
+            this.leftThumb_y_text.Name = "leftThumb_y_text";
+            this.leftThumb_y_text.Size = new System.Drawing.Size(48, 25);
+            this.leftThumb_y_text.TabIndex = 3;
+            this.leftThumb_y_text.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(15, 160);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Y";
+            // 
+            // leftThumb_x_text
+            // 
+            this.leftThumb_x_text.Location = new System.Drawing.Point(38, 126);
+            this.leftThumb_x_text.Name = "leftThumb_x_text";
+            this.leftThumb_x_text.Size = new System.Drawing.Size(48, 25);
+            this.leftThumb_x_text.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(15, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(389, 278);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "协议帧";
+            // 
+            // foxLabel1
+            // 
+            this.foxLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.foxLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.foxLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
+            this.foxLabel1.Location = new System.Drawing.Point(82, 288);
+            this.foxLabel1.Name = "foxLabel1";
+            this.foxLabel1.Size = new System.Drawing.Size(65, 19);
+            this.foxLabel1.TabIndex = 16;
+            this.foxLabel1.Text = "发送关闭";
+            // 
+            // XBOXinfo
+            // 
+            this.XBOXinfo.BackColor = System.Drawing.Color.Red;
+            this.XBOXinfo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.XBOXinfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.XBOXinfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.XBOXinfo.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.XBOXinfo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.XBOXinfo.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.XBOXinfo.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.XBOXinfo.EnabledCalc = true;
+            this.XBOXinfo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.XBOXinfo.ForeColor = System.Drawing.Color.Black;
+            this.XBOXinfo.Location = new System.Drawing.Point(12, 238);
+            this.XBOXinfo.Name = "XBOXinfo";
+            this.XBOXinfo.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.XBOXinfo.Size = new System.Drawing.Size(134, 30);
+            this.XBOXinfo.TabIndex = 17;
+            this.XBOXinfo.Text = "XBOX未连接";
+            this.XBOXinfo.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.foxButton1_Click);
+            // 
+            // rightThumb_y_text
+            // 
+            this.rightThumb_y_text.Location = new System.Drawing.Point(296, 157);
+            this.rightThumb_y_text.Name = "rightThumb_y_text";
+            this.rightThumb_y_text.Size = new System.Drawing.Size(48, 25);
+            this.rightThumb_y_text.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(273, 160);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 19);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Y";
+            // 
+            // rightThumb_x_text
+            // 
+            this.rightThumb_x_text.Location = new System.Drawing.Point(296, 126);
+            this.rightThumb_x_text.Name = "rightThumb_x_text";
+            this.rightThumb_x_text.Size = new System.Drawing.Size(48, 25);
+            this.rightThumb_x_text.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(273, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 19);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "X";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 333);
+            this.Controls.Add(this.XBOXinfo);
+            this.Controls.Add(this.foxLabel1);
+            this.Controls.Add(this.foreverTabPage1);
             this.Controls.Add(this.metroSwitch1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dungeonTabPage1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.serial_open_btn);
             this.Controls.Add(this.serial_refresh_btn);
             this.Controls.Add(this.comboBox5);
@@ -289,8 +340,9 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.dungeonTabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.foreverTabPage1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,14 +358,20 @@
         private System.Windows.Forms.Button serial_refresh_btn;
         private System.Windows.Forms.Button serial_open_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ReaLTaiizor.Controls.Button button2;
-        private ReaLTaiizor.Controls.DungeonTabPage dungeonTabPage1;
+        private ReaLTaiizor.Controls.MetroSwitch metroSwitch1;
+        private ReaLTaiizor.Controls.ForeverTabPage foreverTabPage1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private ReaLTaiizor.Controls.CircleProgressBar circleProgressBar1;
-        private ReaLTaiizor.Controls.Button button1;
-        private ReaLTaiizor.Controls.MetroSwitch metroSwitch1;
+        private ReaLTaiizor.Controls.FoxLabel foxLabel1;
+        private ReaLTaiizor.Controls.FoxButton XBOXinfo;
+        private System.Windows.Forms.TextBox leftThumb_x_text;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox leftThumb_y_text;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox rightThumb_y_text;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox rightThumb_x_text;
+        private System.Windows.Forms.Label label4;
     }
 }
 
