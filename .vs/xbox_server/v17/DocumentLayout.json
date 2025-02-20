@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Project\\Host_project\\xbox_server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|d:\\project\\host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|D:\\Project\\Host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|d:\\project\\host_project\\xbox_server\\code\\serialport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:code\\serialport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|d:\\project\\host_project\\xbox_server\\code\\myxbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:code\\myxbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|d:\\project\\host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|D:\\Project\\Host_project\\xbox_server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|d:\\project\\host_project\\xbox_server\\code\\myxbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1366AD9-1F86-4A56-A3BB-038DD73674DF}|xbox_server.csproj|solutionrelative:code\\myxbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "myxbox.cs",
               "DocumentMoniker": "D:\\Project\\Host_project\\xbox_server\\Code\\myxbox.cs",
               "RelativeDocumentMoniker": "Code\\myxbox.cs",
@@ -47,13 +47,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Project\\Host_project\\xbox_server\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Project\\Host_project\\xbox_server\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAKkAAAAAAAAAAAAiwMcAAAA9AAAA",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAgwMcAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T03:25:39.894Z",
               "EditorCaption": ""
@@ -66,14 +66,14 @@
               "RelativeDocumentMoniker": "Code\\serialport.cs",
               "ToolTip": "D:\\Project\\Host_project\\xbox_server\\Code\\serialport.cs",
               "RelativeToolTip": "Code\\serialport.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAcwKQAAAAUAAAA",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAcwKIAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T01:44:55.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "D:\\Project\\Host_project\\xbox_server\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
