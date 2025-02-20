@@ -49,11 +49,11 @@
             this.leftThumb_x_text = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.clearbuffer = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.XBOXinfo = new System.Windows.Forms.Label();
             this.sendinfo_label = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.clearbuffer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.foreverTabPage1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -294,6 +294,37 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "协议帧";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage3.Controls.Add(this.clearbuffer);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(389, 278);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "串口接收区";
+            // 
+            // clearbuffer
+            // 
+            this.clearbuffer.Location = new System.Drawing.Point(6, 247);
+            this.clearbuffer.Name = "clearbuffer";
+            this.clearbuffer.Size = new System.Drawing.Size(106, 28);
+            this.clearbuffer.TabIndex = 1;
+            this.clearbuffer.Text = "清除接收区";
+            this.clearbuffer.UseVisualStyleBackColor = true;
+            this.clearbuffer.Click += new System.EventHandler(this.clearbuffer_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 7);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(377, 236);
+            this.textBox1.TabIndex = 0;
+            // 
             // XBOXinfo
             // 
             this.XBOXinfo.AutoSize = true;
@@ -313,37 +344,6 @@
             this.sendinfo_label.Size = new System.Drawing.Size(63, 14);
             this.sendinfo_label.TabIndex = 18;
             this.sendinfo_label.Text = "发送关闭";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage3.Controls.Add(this.clearbuffer);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(389, 278);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "串口接收区";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 7);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(377, 236);
-            this.textBox1.TabIndex = 0;
-            // 
-            // clearbuffer
-            // 
-            this.clearbuffer.Location = new System.Drawing.Point(6, 247);
-            this.clearbuffer.Name = "clearbuffer";
-            this.clearbuffer.Size = new System.Drawing.Size(106, 28);
-            this.clearbuffer.TabIndex = 1;
-            this.clearbuffer.Text = "清除接收区";
-            this.clearbuffer.UseVisualStyleBackColor = true;
-            this.clearbuffer.Click += new System.EventHandler(this.clearbuffer_Click);
             // 
             // Form1
             // 

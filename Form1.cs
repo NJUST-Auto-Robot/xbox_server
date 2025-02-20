@@ -21,7 +21,7 @@ namespace xbox_server
         System.Threading.Timer Timer1;
         System.Threading.Timer timer_serial_send;
 
-        XboxDataFrame xbox_data = new XboxDataFrame();
+        XboxDataFrame xbox_data_frame = new XboxDataFrame();
 
         public Form1()
         {
@@ -179,7 +179,24 @@ namespace xbox_server
                 {
                     sendinfo_label.Text = "发送开启";
 
-                    byte[] dataToSend = xbox_data.ToByteArray();
+                    xbox_data_frame.leftThumb_x = (short)(XInputController.Instance.leftThumb_x * 100);
+                    xbox_data_frame.leftThumb_y = (short)(XInputController.Instance.leftThumb_y * 100);
+                    xbox_data_frame.rightThumb_x = (short)(XInputController.Instance.rightThumb_x * 100);
+                    xbox_data_frame.rightThumb_y = (short)(XInputController.Instance.rightThumb_y * 100);
+                    xbox_data_frame.leftTrigger = XInputController.Instance.leftTrigger;
+                    xbox_data_frame.rightTrigger = XInputController.Instance.rightTrigger;
+                    xbox_data_frame.buttons = XInputController.Instance.buttons;
+
+                    xbox_data_frame.ddr16 = (ushort)(xbox_data_frame.Head +
+                                                    xbox_data_frame.leftThumb_x +
+                                                    xbox_data_frame.leftThumb_y +
+                                                    xbox_data_frame.rightThumb_x +
+                                                    xbox_data_frame.rightThumb_y +
+                                                    xbox_data_frame.leftTrigger +
+                                                    xbox_data_frame.rightTrigger +
+                                                    xbox_data_frame.buttons);
+
+                    byte[] dataToSend = xbox_data_frame.ToByteArray();
                     serialport.Instance.SendData(dataToSend);
                 }
                 else

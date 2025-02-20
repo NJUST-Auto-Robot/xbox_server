@@ -12,8 +12,9 @@ namespace xbox_server.MyXBOX
         Gamepad gamepad;
         public bool connected = false;
         public int deadband = 2500;
+        public ushort buttons;
         public float leftThumb_x, leftThumb_y, rightThumb_x, rightThumb_y;
-        public float leftTrigger, rightTrigger;
+        public byte leftTrigger, rightTrigger;
 
         //构建函数
         private XInputController()
@@ -55,6 +56,8 @@ namespace xbox_server.MyXBOX
 
             leftTrigger = gamepad.LeftTrigger;
             rightTrigger = gamepad.RightTrigger;
+
+            buttons = (ushort)gamepad.Buttons;
         }
 
     }
