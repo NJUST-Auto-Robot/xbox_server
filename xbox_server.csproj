@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\myxbox.cs" />
+    <Compile Include="Code\serialport.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

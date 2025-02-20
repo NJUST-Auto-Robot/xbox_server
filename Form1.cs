@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO.Ports;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ using System.Windows.Forms;
 
 //用户库引用
 using xbox_server.MyXBOX;
+using xbox_server.SerialPorts;
 
 
 namespace xbox_server
@@ -17,6 +19,9 @@ namespace xbox_server
         Thread threadA;
         Thread thread_Paint;
         System.Threading.Timer Timer1;
+        System.Threading.Timer timer_serial_send;
+
+        XboxDataFrame xbox_data = new XboxDataFrame();
 
         public Form1()
         {
@@ -25,6 +30,54 @@ namespace xbox_server
 
             this.FormClosing += new FormClosingEventHandler(Form1_Closing);
             tabPage1.Paint += TabPage1_Paint;//重绘控件的回调
+
+            //串口接收回调绑定
+            serialport.Instance.OnDataReceived = serial_received_callback;
+
+            {
+                //初始化串口列表
+                string[] portnames = serialport.Instance.ScanPorts();
+                foreach (string portname in portnames)
+                {
+                    portinfo_combox.Items.Add(portname);
+                }
+                // 设置波特率
+                int[] baudRates = { 115200, 9600, 19200, 38400, 57600 };
+                foreach (int rate in baudRates)
+                {
+                    baudrate_combox.Items.Add(rate);
+                }
+                // 设置奇偶校验位
+                Parity[] paritys = { Parity.None, Parity.Odd, Parity.Even };
+                foreach (Parity parity in paritys)
+                {
+                    parity_combox.Items.Add(parity);
+                }
+                // 设置停止位
+                StopBits[] stopBits = { StopBits.One, StopBits.OnePointFive, StopBits.Two };
+                foreach (StopBits bits in stopBits)
+                {
+                    stopbit_combox.Items.Add(bits);
+                }
+
+                // 设置数据位
+                int[] dataBits = { 5, 6, 7, 8 };
+                foreach (int bits in dataBits)
+                {
+                    databit_combox.Items.Add(bits);
+                }
+                // 选择默认值
+                if (portinfo_combox.Items.Count > 0)
+                {
+                    portinfo_combox.SelectedIndex = 0; // 第一个可用的串口
+                                                       //portinfo.Text = ports[0].ToString();
+                }
+                baudrate_combox.SelectedItem = 115200;  // 默认波特率
+                stopbit_combox.SelectedItem = StopBits.One; // 默认停止位
+                parity_combox.SelectedItem = Parity.None;   //默认校验位
+                databit_combox.SelectedItem = 8;     // 默认数据位
+            }
+
 
             XInputController.Instance.CheckXbox();
 
@@ -35,15 +88,12 @@ namespace xbox_server
             //thread_Paint.Start();
 
             Timer1 = new System.Threading.Timer(Timer1Callback, null, 1000, 10);
+            timer_serial_send = new System.Threading.Timer(timer_serial_send_callback, null, 0, 10);
 
         }
         public void Timer1Callback(object state) // 入参对象为 Timer 对象
         {
             tabPage1.Invalidate();
-
-            //Timer t = (Timer)state;
-            //t.Dispose(); // 调用一次就释放掉，或者添加条件释放
-            //Console.WriteLine("The timer callback executes.");
 
         }
 
@@ -53,6 +103,7 @@ namespace xbox_server
             threadA.Abort();
             //thread_Paint.Abort();
             Timer1.Dispose();
+            timer_serial_send.Dispose();
         }
 
         public void TabPage1_Paint(object sender, PaintEventArgs e)
@@ -115,23 +166,106 @@ namespace xbox_server
 
                 if (this.IsHandleCreated && true == XInputController.Instance.CheckXbox())
                     Invoke(action);
-                else if(this.IsHandleCreated && true != XInputController.Instance.CheckXbox())
+                else if (this.IsHandleCreated && true != XInputController.Instance.CheckXbox())
                     Invoke(action_);
             }
         }
 
+        public void timer_serial_send_callback(object state)
+        {
+            Action action = () =>
+            {
+                if (send_swicth.Switched == true)
+                {
+                    sendinfo_label.Text = "发送开启";
 
+                    byte[] dataToSend = xbox_data.ToByteArray();
+                    serialport.Instance.SendData(dataToSend);
+                }
+                else
+                {
+                    sendinfo_label.Text = "发送关闭";
+                }
+            };
+            if (this.IsHandleCreated)
+                Invoke(action);
+        }
+
+        public void serial_received_callback(byte[] data)
+        {
+            Action action = () =>
+            {
+                string hexOutput = BitConverter.ToString(data).Replace("-", "");
+                textBox1.AppendText(hexOutput + "\r\n");
+            };
+            if (this.IsHandleCreated)
+                Invoke(action);
+        }
+
+        private void send_swicth_SwitchedChanged(object sender)
+        {
+
+        }
+
+
+        private void serial_refresh_btn_Click(object sender, EventArgs e)
+        {
+            portinfo_combox.Items.Clear();
+            string[] portnames = serialport.Instance.ScanPorts();
+            foreach (string portname in portnames)
+            {
+                portinfo_combox.Items.Add(portname);
+            }
+        }
+
+        private void serial_open_btn_Click(object sender, EventArgs e)
+        {
+            Action action = () =>
+            {
+                portinfo_combox.Items.Clear();
+                string[] portnames = serialport.Instance.ScanPorts();
+                foreach (string portname in portnames)
+                {
+                    portinfo_combox.Items.Add(portname);
+                }
+                string _portname = portinfo_combox.Text;
+
+                if ("打开串口" == serial_open_btn.Text)
+                {
+                    try
+                    {
+                        if (true == serialport.Instance.OpenSerialPort(_portname, 115200, Parity.None, 8, StopBits.One))
+                        {
+                            serial_open_btn.Text = (String)("关闭串口");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("OpenError", "SoftError", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                else if ("关闭串口" == serial_open_btn.Text)
+                {
+                    try
+                    {
+                        serialport.Instance.CloseSerialPort();
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                    serial_open_btn.Text = (String)("打开串口");
+                }
+            };
+            Invoke(action);
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-
-        private void metroSwitch1_SwitchedChanged(object sender)
-        {
-
-        }
 
         private void foxButton1_Click(object sender, EventArgs e)
         {
@@ -152,6 +286,11 @@ namespace xbox_server
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearbuffer_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
         }
     }
 }
