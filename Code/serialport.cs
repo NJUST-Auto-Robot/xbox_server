@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using System.IO.Ports;
+using System.Linq;
 
 namespace xbox_server.SerialPorts
 {
@@ -156,7 +157,8 @@ namespace xbox_server.SerialPorts
             Y = 0x8000
         }
 
-        public ushort Head { get; set; } = 0xFB7A;
+        public byte Head1 { get; set; } = 0xFB;
+        public byte Head2 { get; set; } = 0x7A;
         public short leftThumb_x { get; set; }
         public short leftThumb_y { get; set; }
         public short rightThumb_x { get; set; }
@@ -167,21 +169,43 @@ namespace xbox_server.SerialPorts
         public ushort ddr16 { get; set; }
 
         // 将数据帧转换为字节数组
-        public byte[] ToByteArray()
+        public byte[] ToByteArray_B()
         {
             List<byte> byteList = new List<byte>();
 
             // 添加数据到数组
-            byteList.AddRange(BitConverter.GetBytes(Head));
+            byteList.AddRange(new byte[] { Head1 });  // 单字节不需要转换
+            byteList.AddRange(new byte[] { Head2 });  // 单字节不需要转换
+            byteList.AddRange(BitConverter.GetBytes(leftThumb_x).Reverse());
+            byteList.AddRange(BitConverter.GetBytes(leftThumb_y).Reverse());
+            byteList.AddRange(BitConverter.GetBytes(rightThumb_x).Reverse());
+            byteList.AddRange(BitConverter.GetBytes(rightThumb_y).Reverse());
+            byteList.AddRange(new byte[] { leftTrigger });  // 单字节不需要转换
+            byteList.AddRange(new byte[] { rightTrigger }); // 单字节不需要转换
+            byteList.AddRange(BitConverter.GetBytes(buttons).Reverse());
+            byteList.AddRange(BitConverter.GetBytes(ddr16).Reverse());
+
+
+            return byteList.ToArray();
+        }
+
+        public byte[] ToByteArray_S()
+        {
+            List<byte> byteList = new List<byte>();
+
+            // 添加数据到数组
+            byteList.AddRange(new byte[] { Head1 });  // 单字节不需要转换
+            byteList.AddRange(new byte[] { Head2 });  // 单字节不需要转换
             byteList.AddRange(BitConverter.GetBytes(leftThumb_x));
             byteList.AddRange(BitConverter.GetBytes(leftThumb_y));
             byteList.AddRange(BitConverter.GetBytes(rightThumb_x));
             byteList.AddRange(BitConverter.GetBytes(rightThumb_y));
-            byteList.AddRange(BitConverter.GetBytes(leftTrigger));
-            byteList.AddRange(BitConverter.GetBytes(rightTrigger));
+            byteList.AddRange(new byte[] { leftTrigger });  // 单字节不需要转换
+            byteList.AddRange(new byte[] { rightTrigger }); // 单字节不需要转换
             byteList.AddRange(BitConverter.GetBytes(buttons));
             byteList.AddRange(BitConverter.GetBytes(ddr16));
-            
+
+
             return byteList.ToArray();
         }
     }

@@ -54,6 +54,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.XBOXinfo = new System.Windows.Forms.Label();
             this.sendinfo_label = new System.Windows.Forms.Label();
+            this.send_mode_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.foreverTabPage1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -324,6 +325,7 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(377, 236);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // XBOXinfo
             // 
@@ -345,11 +347,23 @@
             this.sendinfo_label.TabIndex = 18;
             this.sendinfo_label.Text = "发送关闭";
             // 
+            // send_mode_button
+            // 
+            this.send_mode_button.Location = new System.Drawing.Point(11, 160);
+            this.send_mode_button.Margin = new System.Windows.Forms.Padding(2);
+            this.send_mode_button.Name = "send_mode_button";
+            this.send_mode_button.Size = new System.Drawing.Size(65, 21);
+            this.send_mode_button.TabIndex = 19;
+            this.send_mode_button.Text = "大端发送";
+            this.send_mode_button.UseVisualStyleBackColor = true;
+            this.send_mode_button.Click += new System.EventHandler(this.send_mode_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 333);
+            this.Controls.Add(this.send_mode_button);
             this.Controls.Add(this.sendinfo_label);
             this.Controls.Add(this.XBOXinfo);
             this.Controls.Add(this.foreverTabPage1);
@@ -403,6 +417,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button clearbuffer;
+        private System.Windows.Forms.Button send_mode_button;
     }
 }
 

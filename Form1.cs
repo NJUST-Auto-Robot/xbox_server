@@ -179,15 +179,16 @@ namespace xbox_server
                 {
                     sendinfo_label.Text = "发送开启";
 
-                    xbox_data_frame.leftThumb_x = (short)(XInputController.Instance.leftThumb_x * 100);
-                    xbox_data_frame.leftThumb_y = (short)(XInputController.Instance.leftThumb_y * 100);
-                    xbox_data_frame.rightThumb_x = (short)(XInputController.Instance.rightThumb_x * 100);
-                    xbox_data_frame.rightThumb_y = (short)(XInputController.Instance.rightThumb_y * 100);
+                    xbox_data_frame.leftThumb_x = (short)(XInputController.Instance.leftThumb_x);
+                    xbox_data_frame.leftThumb_y = (short)(XInputController.Instance.leftThumb_y);
+                    xbox_data_frame.rightThumb_x = (short)(XInputController.Instance.rightThumb_x);
+                    xbox_data_frame.rightThumb_y = (short)(XInputController.Instance.rightThumb_y);
                     xbox_data_frame.leftTrigger = XInputController.Instance.leftTrigger;
                     xbox_data_frame.rightTrigger = XInputController.Instance.rightTrigger;
                     xbox_data_frame.buttons = XInputController.Instance.buttons;
 
-                    xbox_data_frame.ddr16 = (ushort)(xbox_data_frame.Head +
+                    xbox_data_frame.ddr16 = (ushort)(xbox_data_frame.Head1 +
+                                                    xbox_data_frame.Head2 +
                                                     xbox_data_frame.leftThumb_x +
                                                     xbox_data_frame.leftThumb_y +
                                                     xbox_data_frame.rightThumb_x +
@@ -196,8 +197,16 @@ namespace xbox_server
                                                     xbox_data_frame.rightTrigger +
                                                     xbox_data_frame.buttons);
 
-                    byte[] dataToSend = xbox_data_frame.ToByteArray();
-                    serialport.Instance.SendData(dataToSend);
+                    if (send_mode_button.Text == "大端发送")
+                    {
+                        byte[] dataToSend = xbox_data_frame.ToByteArray_B();
+                        serialport.Instance.SendData(dataToSend);
+                    }
+                    else if (send_mode_button.Text == "小端发送")
+                    {
+                        byte[] dataToSend = xbox_data_frame.ToByteArray_S();
+                        serialport.Instance.SendData(dataToSend);
+                    }
                 }
                 else
                 {
@@ -308,6 +317,23 @@ namespace xbox_server
         private void clearbuffer_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void send_mode_button_Click(object sender, EventArgs e)
+        {
+            if (send_mode_button.Text == "大端发送")
+            {
+                send_mode_button.Text = "小端发送";
+            }
+            else
+            {
+                send_mode_button.Text = "大端发送";
+            }
         }
     }
 }
