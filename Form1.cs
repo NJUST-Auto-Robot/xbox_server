@@ -42,7 +42,7 @@ namespace xbox_server
                     portinfo_combox.Items.Add(portname);
                 }
                 // 设置波特率
-                int[] baudRates = { 115200, 9600, 19200, 38400, 57600 };
+                int[] baudRates = { 921600, 115200, 9600, 19200, 38400, 57600 };
                 foreach (int rate in baudRates)
                 {
                     baudrate_combox.Items.Add(rate);
@@ -72,7 +72,7 @@ namespace xbox_server
                     portinfo_combox.SelectedIndex = 0; // 第一个可用的串口
                                                        //portinfo.Text = ports[0].ToString();
                 }
-                baudrate_combox.SelectedItem = 115200;  // 默认波特率
+                baudrate_combox.SelectedItem = 921600;  // 默认波特率
                 stopbit_combox.SelectedItem = StopBits.One; // 默认停止位
                 parity_combox.SelectedItem = Parity.None;   //默认校验位
                 databit_combox.SelectedItem = 8;     // 默认数据位
@@ -88,7 +88,7 @@ namespace xbox_server
             //thread_Paint.Start();
 
             Timer1 = new System.Threading.Timer(Timer1Callback, null, 1000, 10);
-            timer_serial_send = new System.Threading.Timer(timer_serial_send_callback, null, 0, 10);
+            timer_serial_send = new System.Threading.Timer(timer_serial_send_callback, null, 0, 2);
 
         }
         public void Timer1Callback(object state) // 入参对象为 Timer 对象
@@ -260,7 +260,7 @@ namespace xbox_server
                 {
                     try
                     {
-                        if (true == serialport.Instance.OpenSerialPort(_portname, 115200, Parity.None, 8, StopBits.One))
+                        if (true == serialport.Instance.OpenSerialPort(_portname, 921600, Parity.None, 8, StopBits.One))
                         {
                             serial_open_btn.Text = (String)("关闭串口");
                         }
